@@ -17,5 +17,10 @@
 				sh 'sudo docker images | grep php54local'
 			}
 		}
+		stage ('Cargar Pagina'){
+			steps{
+				sh 'sudo docker images | grep php54'
+                                sh 'sudo docker-compose down'
+				sh 'sudo docker-compose up -d'
 	}
 }
